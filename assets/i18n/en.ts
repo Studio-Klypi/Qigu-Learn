@@ -1,4 +1,10 @@
 export default {
+  // temp
+  responsiveNotAvailable: {
+    title: "In Development",
+    description: "Responsive design is not yet available. The team is currently working on it to deliver it as soon as possible.",
+  },
+  // temp
   locales: {
     fr: "French",
     en: "English",
@@ -11,7 +17,7 @@ export default {
   },
   roles: {
     coordinator: "Coordinator",
-    facilitator: "Trainer",
+    facilitator: "Facilitator",
     coach: "Coach",
   },
   navigation: {
@@ -39,7 +45,7 @@ export default {
     },
     language: {
       title: "Language",
-      description: "Select the language in which you want your interface to be displayed in the future.",
+      description: "Select the language you want your interface to display in the future.",
     },
     appearance: {
       title: "Appearance",
@@ -47,9 +53,9 @@ export default {
     },
     programNotifications: {
       title: "Program Notifications",
-      description: "Select how you want to receive updates for your program. Disabling program email notifications will not affect receiving other important system alerts by email. Adjust your settings to stay informed in the way that works best for you!",
+      description: "Select how you want to receive updates about your program. Disabling email notifications for the program will not affect the receipt of other important system alerts via email. Adjust your settings to stay informed in the way that suits you best!",
       options: {
-        inApp: "In-app only",
+        inApp: "In App Only",
         appAndPush: "Browser & Mobile App",
         appAndEmail: "Browser & Email",
         everywhere: "All Platforms",
@@ -58,7 +64,7 @@ export default {
     },
     activityReportNotifications: {
       title: "Activity Summary",
-      description: "Track your progress effortlessly! Decide how often you want activity summaries. These updates will be sent to you via email for your convenience.",
+      description: "Track your progress effortlessly! Determine the frequency of your activity summaries. These updates will be sent to you via email seamlessly.",
       options: {
         no: "No Summary",
         daily: "Daily",
@@ -69,15 +75,80 @@ export default {
   },
   // pages
   course: {
-    tab: "Course · {program}",
+    tab: "Program · {program}",
+    noContent: "No content to display...",
+    noActivity: "No activity selected...",
   },
   people: {
     tab: "Participants · {program}",
+    search: "Search for a participant...",
+    you: "You",
+    count: {
+      results: "{value} result(s)",
+      participants: "{value} participant(s)",
+    },
+    sections: {
+      mentor: {
+        label: "Your Mentor",
+        invite: "Invite your mentor",
+      },
+      facilitators: {
+        label: "Your Facilitators",
+        noOne: "No facilitator...",
+      },
+    },
   },
   success: {
     tab: "Success · {program}",
+    score: {
+      title: "Scores",
+      noScores: "No variables...",
+    },
+    success: {
+      title: "Success",
+      unnamed: "Unnamed",
+      badge: {
+        new: "New",
+        test: "Test",
+      },
+    },
   },
   help: {
-    tab: "Learn · Getting Help",
+    tab: "Learn · Get Help",
+    ticket: {
+      create: "New Ticket",
+      search: "Search for a ticket...",
+      noOpened: "No open tickets for now...",
+      closed: "Closed",
+      category: {
+        logistic: "Logistics",
+        usage: "Usage",
+        data: "Data Retrieval/Deletion",
+        other: "Other Request",
+      },
+    },
+    fields: {
+      program: "Program",
+      title: {
+        label: "Title",
+        placeholder: "Title of the claim",
+      },
+      description: {
+        label: "Description",
+        placeholder: "Your message...",
+      },
+      category: "Category",
+    },
+    config: {
+      hideClosed: "Hide Closed Tickets",
+      explanation: "If you have a query, please create a ticket. Your ticket will be addressed to the person on our team best suited to help you.",
+      information: "Make sure to provide as much information as possible.",
+      timing: "We typically respond within 24 hours. You will receive a notification when we have replied to your request.",
+    },
+    createAction: {
+      idle: "Open Ticket",
+      loading: "Opening ticket...",
+    },
+    reply: "Reply...",
   },
 };
