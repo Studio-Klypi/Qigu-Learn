@@ -1,0 +1,45 @@
+{
+  "name": "qigu-learn",
+  "version": "7.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "0.7.5",
+    "@nuxtjs/color-mode": "3.5.2",
+    "@nuxtjs/google-fonts": "3.2.0",
+    "@nuxtjs/i18n": "9.1.1",
+    "@nuxtjs/tailwindcss": "6.13.1",
+    "@vee-validate/zod": "^4.15.0",
+    "@vueuse/core": "^12.4.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^9.18.0",
+    "lucide-vue-next": "^0.471.0",
+    "nuxt": "^3.15.2",
+    "radix-vue": "^1.9.12",
+    "shadcn-nuxt": "0.11.3",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vee-validate": "^4.15.0",
+    "vue": "latest",
+    "vue-router": "latest",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.3",
+    "vite-plugin-eslint2": "^5.0.3"
+  }
+}
