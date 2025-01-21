@@ -78,4 +78,29 @@ export default [
       },
     ],
   },
+  {
+    id: 2,
+    name: "Test Program:Go",
+    stats: {
+      contents: 0,
+      contentsDone: 0,
+      stages: 2,
+    },
+    stages: [
+      {
+        name: "Test des informations",
+        description: "",
+        type: ["e-learning"],
+        isLocked: false,
+        contents: [],
+      },
+      {
+        name: "Test du Program:Go",
+        description: "",
+        type: ["e-learning"],
+        isLocked: false,
+        contents: [],
+      },
+    ],
+  },
 ] as IProgram[];

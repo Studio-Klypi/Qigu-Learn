@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import PageRoot from "~/components/composing/page/PageRoot.vue";
 import SuccessBadge from "~/components/library/badges/SuccessBadge.vue";
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -10,18 +12,18 @@ import SuccessBadge from "~/components/library/badges/SuccessBadge.vue";
   >
     <section class="flex flex-col gap-4">
       <h2 class="text-2xl font-extrabold">
-        Scores
+        {{ t("success.score.title") }}
       </h2>
 
       <div class="flex flex-col gap-2">
         <span class="italic text-muted-foreground">
-          Aucune variable...
+          {{ t("success.score.noScores") }}
         </span>
       </div>
     </section>
     <section class="col-span-2 flex flex-col gap-4">
       <h2 class="text-2xl font-extrabold">
-        Succès
+        {{ t("success.success.title") }}
       </h2>
 
       <div class="grid grid-cols-4 gap-4">

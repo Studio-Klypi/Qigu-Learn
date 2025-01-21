@@ -116,9 +116,11 @@ function selectProgram(target: IProgram) {
               <Settings />
               <span>{{ t("navigation.user.settings") }}</span>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <CircleHelp />
-              <span>{{ t("navigation.user.help") }}</span>
+            <DropdownMenuItem as-child>
+              <NuxtLinkLocale :to="useJourneyUrl('/utils/help')">
+                <CircleHelp />
+                <span>{{ t("navigation.user.help") }}</span>
+              </NuxtLinkLocale>
             </DropdownMenuItem>
             <DropdownMenuItem as-child>
               <NuxtLink

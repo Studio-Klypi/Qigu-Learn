@@ -1,4 +1,10 @@
 export default {
+  // temp
+  responsiveNotAvailable: {
+    title: "En cours de développement",
+    description: "Le responsive n'est pas encore disponible. L'équipe travaille dessus en ce moment pour le fournir au plus vite.",
+  },
+  // temp
   locales: {
     fr: "Français",
     en: "Anglais",
@@ -70,11 +76,79 @@ export default {
   // pages
   course: {
     tab: "Parcours · {program}",
+    noContent: "Aucun contenu à afficher...",
+    noActivity: "Aucune activité sélectionnée...",
   },
   people: {
     tab: "Participants · {program}",
+    search: "Rechercher un participant...",
+    you: "Vous",
+    count: {
+      results: "{value} résultat(s)",
+      participants: "{value} participant(s)",
+    },
+    sections: {
+      mentor: {
+        label: "Votre mentor",
+        invite: "Inviter votre mentor",
+      },
+      facilitators: {
+        label: "Vos facilitateurs",
+        noOne: "Aucun facilitateur...",
+      },
+    },
   },
   success: {
     tab: "Succès · {program}",
+    score: {
+      title: "Scores",
+      noScores: "Aucune variable...",
+    },
+    success: {
+      title: "Succès",
+      unnamed: "Non nommé",
+      badge: {
+        new: "Nouveau",
+        test: "Test",
+      },
+    },
+  },
+  help: {
+    tab: "Learn · Obtenir de l'aide",
+    ticket: {
+      create: "Nouveau ticket",
+      search: "Recherchez un ticket...",
+      noOpened: "Pas de tickets ouverts pour l'instant...",
+      closed: "Fermé",
+      category: {
+        logistic: "Logistique",
+        usage: "Utilisation",
+        data: "Récupération/Suppression des données",
+        other: "Autre demande",
+      },
+    },
+    fields: {
+      program: "Parcours",
+      title: {
+        label: "Titre",
+        placeholder: "Titre de la réclamation",
+      },
+      description: {
+        label: "Description",
+        placeholder: "Votre message...",
+      },
+      category: "Catégorie",
+    },
+    config: {
+      hideClosed: "Masquer les tickets clôturés",
+      explanation: "Si vous avez une requête, veuillez créer un ticket. Votre ticket sera adressé à la personne de notre équipe la plus à même de vous aider.",
+      information: "Assurez-vous de fournir le plus d’informations possible.",
+      timing: "Nous répondons généralement sous 24 heures. Vous recevrez une notification quand nous aurons répondu à votre requête.",
+    },
+    createAction: {
+      idle: "Ouvrir le ticket",
+      loading: "Ouverture du ticket...",
+    },
+    reply: "Réponde...",
   },
 };
