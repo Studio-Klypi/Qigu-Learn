@@ -3,7 +3,7 @@ import PageRoot from "~/components/composing/page/PageRoot.vue";
 import ActivityDetail from "~/components/library/contents/ActivityDetail.vue";
 import StageList from "~/components/library/stages/StageList.vue";
 
-// const { t } = useI18n();
+const { t } = useI18n();
 const program = useSelectedProgram();
 const activity = useSelectedActivity();
 </script>
@@ -18,10 +18,19 @@ const activity = useSelectedActivity();
       class="col-span-4 h-1"
     />
     <StageList :stages="program.stages" />
+
     <ActivityDetail
       v-if="!!activity"
       :activity="activity"
       class="col-span-3"
     />
+    <div
+      v-else
+      class="col-span-3 py-8 px-12 flex items-center justify-center"
+    >
+      <p class="text-sm italic text-muted-foreground">
+        {{ t("course.noActivity") }}
+      </p>
+    </div>
   </PageRoot>
 </template>

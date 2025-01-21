@@ -5,6 +5,7 @@ import ContentItem from "~/components/library/contents/ContentItem.vue";
 
 const collapsed = ref<boolean>(true);
 
+const { t } = useI18n();
 defineProps<{
   stage: IStage;
 }>();
@@ -47,12 +48,12 @@ defineProps<{
             v-for="(content, index) in stage.contents"
             :key="`content-${index}`"
             :content="content"
-            :locked="stage.isLocked"
+            :locked="stage.isLocked ?? false"
           />
         </template>
         <template v-else>
           <p class="italic text-muted-foreground">
-            No content to display...
+            {{ t("course.noContent") }}
           </p>
         </template>
       </div>

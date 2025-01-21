@@ -70,6 +70,8 @@ export default {
   // pages
   course: {
     tab: "Parcours · {program}",
+    noContent: "Aucun contenu à afficher...",
+    noActivity: "Aucune activité sélectionnée...",
   },
   people: {
     tab: "Participants · {program}",
