@@ -77,4 +77,7 @@ export default {
   success: {
     tab: "Succès · {program}",
   },
+  help: {
+    tab: "Learn · Obtenir de l'aide",
+  },
 };
