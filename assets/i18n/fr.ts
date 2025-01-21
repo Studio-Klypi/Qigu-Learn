@@ -75,6 +75,22 @@ export default {
   },
   people: {
     tab: "Participants · {program}",
+    search: "Rechercher un participant...",
+    you: "Vous",
+    count: {
+      results: "{value} résultat(s)",
+      participants: "{value} participant(s)",
+    },
+    sections: {
+      mentor: {
+        label: "Votre mentor",
+        invite: "Inviter votre mentor",
+      },
+      facilitators: {
+        label: "Vos facilitateurs",
+        noOne: "Aucun facilitateur...",
+      },
+    },
   },
   success: {
     tab: "Succès · {program}",

@@ -5,6 +5,8 @@ import type { IUser } from "~/types/user";
 import DynamicUserProfileDialog from "~/components/library/profile/DynamicUserProfileDialog.vue";
 import { wait } from "~/lib/utils";
 
+const { t } = useI18n();
+
 const users = useUsers();
 const me = useMe();
 const search = ref<string>("");
@@ -37,7 +39,7 @@ async function save() {
       <div class="relative">
         <Input
           v-model="search"
-          placeholder="Search someone"
+          :placeholder="t('people.search')"
         />
         <Search class="absolute !h-4 !w-4 top-3 right-4 text-muted-foreground pointer-events-none" />
       </div>
@@ -74,7 +76,7 @@ async function save() {
                     v-if="user.id === me.id"
                     variant="secondary"
                   >
-                    vous
+                    {{ t("people.you") }}
                   </Badge>
                 </p>
                 <span class="text-xs text-muted-foreground">Team 1</span>
@@ -86,33 +88,33 @@ async function save() {
           v-if="search"
           class="text-sm text-muted-foreground self-center"
         >
-          {{ filteredUsers.length }} résultat(s)
+          {{ t("people.count.results", { value: filteredUsers.length }) }}
         </p>
         <p
           v-else
           class="text-sm text-muted-foreground self-center"
         >
-          {{ filteredUsers.length }} participant(s)
+          {{ t("people.count.participants", { value: filteredUsers.length }) }}
         </p>
       </div>
     </div>
     <div class="flex flex-col gap-6">
       <section class="flex flex-col gap-2">
         <p class="font-medium">
-          Votre mentor
+          {{ t("people.sections.mentor.label") }}
         </p>
         <Button>
           <Plus />
-          <span>Inviter votre mentor</span>
+          <span>{{ t("people.sections.mentor.invite") }}</span>
         </Button>
       </section>
       <section class="flex flex-col gap-2">
         <p class="font-medium">
-          Vos facilitateurs
+          {{ t("people.sections.facilitators.label") }}
         </p>
         <div class="flex flex-col gap-1">
           <p class="italic text-muted-foreground text-sm">
-            Aucun facilitateurs...
+            {{ t("people.sections.facilitators.noOne") }}
           </p>
         </div>
       </section>
