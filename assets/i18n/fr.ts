@@ -94,6 +94,18 @@ export default {
   },
   success: {
     tab: "Succès · {program}",
+    score: {
+      title: "Scores",
+      noScores: "Aucune variable...",
+    },
+    success: {
+      title: "Succès",
+      unnamed: "Non nommé",
+      badge: {
+        new: "Nouveau",
+        test: "Test",
+      },
+    },
   },
   help: {
     tab: "Learn · Obtenir de l'aide",

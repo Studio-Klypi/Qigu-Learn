@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 
+const { t } = useI18n();
 const props = defineProps<{
   disabled?: boolean;
   test?: boolean;
@@ -24,21 +25,21 @@ const props = defineProps<{
         v-if="props.new"
         class="absolute top-4 right-4"
       >
-        Nouveau
+        {{ t("success.success.badge.new") }}
       </Badge>
       <Avatar size="base">
-        <AvatarFallback>IMG</AvatarFallback>
+        <AvatarFallback>ig</AvatarFallback>
       </Avatar>
 
       <p class="text-lg font-bold mt-4">
         <slot name="title">
-          Unnamed
+          {{ t("success.success.unnamed") }}
         </slot>
         <Badge
           v-if="test"
           variant="outline"
         >
-          Test
+          {{ t("success.success.badge.test") }}
         </Badge>
       </p>
       <span class="text-center text-muted-foreground text-sm"><slot name="caption" /></span>
