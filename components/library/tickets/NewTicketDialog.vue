@@ -5,6 +5,8 @@ import * as z from "zod";
 import { toTypedSchema } from "@vee-validate/zod";
 import { wait } from "~/lib/utils";
 
+const { t } = useI18n();
+
 const programs = usePrograms();
 const selectedProgram = useSelectedProgram();
 
@@ -56,7 +58,7 @@ const save = handleSubmit(async (values) => {
           name="programId"
         >
           <FormItem>
-            <FormLabel>Parcours</FormLabel>
+            <FormLabel>{{ t("help.fields.program") }}</FormLabel>
             <FormControl v-bind="componentField">
               <Select>
                 <SelectTrigger>
@@ -80,7 +82,7 @@ const save = handleSubmit(async (values) => {
           name="category"
         >
           <FormItem>
-            <FormLabel>Category</FormLabel>
+            <FormLabel>{{ t("help.fields.category") }}</FormLabel>
             <FormControl v-bind="componentField">
               <Select>
                 <SelectTrigger>
@@ -88,16 +90,16 @@ const save = handleSubmit(async (values) => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="logistic">
-                    Logistique
+                    {{ t("help.ticket.category.logistic") }}
                   </SelectItem>
                   <SelectItem value="usage">
-                    Utilisation
+                    {{ t("help.ticket.category.usage") }}
                   </SelectItem>
                   <SelectItem value="data">
-                    Demande de récupération/suppression des données personnelles
+                    {{ t("help.ticket.category.data") }}
                   </SelectItem>
                   <SelectItem value="other">
-                    Autre demande
+                    {{ t("help.ticket.category.other") }}
                   </SelectItem>
                 </SelectContent>
               </Select>
@@ -109,9 +111,9 @@ const save = handleSubmit(async (values) => {
           name="title"
         >
           <FormItem>
-            <FormLabel>Titre</FormLabel>
+            <FormLabel>{{ t("help.fields.title.label") }}</FormLabel>
             <FormControl v-bind="componentField">
-              <Input placeholder="Titre de la réclamation" />
+              <Input :placeholder="t('help.fields.title.placeholder')" />
             </FormControl>
           </FormItem>
         </FormField>
@@ -120,9 +122,9 @@ const save = handleSubmit(async (values) => {
           name="description"
         >
           <FormItem>
-            <FormLabel>Description</FormLabel>
+            <FormLabel>{{ t("help.fields.description.label") }}</FormLabel>
             <FormControl v-bind="componentField">
-              <Textarea placeholder="Votre message..." />
+              <Textarea :placeholder="t('help.fields.description.placeholder')" />
             </FormControl>
           </FormItem>
         </FormField>
@@ -134,11 +136,11 @@ const save = handleSubmit(async (values) => {
           >
             <template v-if="loading">
               <LoaderCircle class="animate-spin" />
-              <span>Création du ticket...</span>
+              <span>{{ t("help.createAction.loading") }}</span>
             </template>
             <template v-else>
               <GitPullRequestCreate />
-              <span>Ouvrir le ticket</span>
+              <span>{{ t("help.createAction.idle") }}</span>
             </template>
           </Button>
         </DialogFooter>

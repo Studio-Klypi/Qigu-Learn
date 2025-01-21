@@ -5,6 +5,8 @@ import TicketDialog from "~/components/library/tickets/TicketDialog.vue";
 import NewTicketDialog from "~/components/library/tickets/NewTicketDialog.vue";
 import type { ITicket } from "~/types/tickets";
 
+const { t } = useI18n();
+
 const checked = ref<boolean>(false);
 const search = ref<string>("");
 const tickets = computed((): ITicket[] => {
@@ -28,25 +30,25 @@ const tickets = computed((): ITicket[] => {
       <NewTicketDialog>
         <Button>
           <Plus />
-          <span>Nouveau ticket</span>
+          <span>{{ t("help.ticket.create") }}</span>
         </Button>
       </NewTicketDialog>
 
       <Card>
         <CardHeader class="flex-row items-center justify-between gap-4 border-b border-border">
-          <p>Masquer les tickets clôturés</p>
+          <p>{{ t("help.config.hideClosed") }}</p>
           <Switch
             :checked="checked"
             @update:checked="checked = $event"
           />
         </CardHeader>
         <CardContent class="p-6 italic text-sm text-muted-foreground bg-muted">
-          <p>Si vous avez une requête, veuillez créer un ticket. Votre ticket sera adressé à la personne de notre équipe la plus à même de vous aider.</p>
+          <p>{{ t("help.config.explanation") }}</p>
           <p class="font-bold">
-            Assurez-vous de fournir le plus d’informations possible.
+            {{ t("help.config.information") }}
           </p>
           <p class="mt-4">
-            Nous répondons généralement sous 24 heures. Vous recevrez une notification quand nous aurons répondu à votre requête.
+            {{ t("help.config.timing") }}
           </p>
         </CardContent>
       </Card>
@@ -56,7 +58,7 @@ const tickets = computed((): ITicket[] => {
       <div class="relative">
         <Input
           v-model="search"
-          placeholder="Recherchez un ticket..."
+          :placeholder="t('help.ticket.search')"
         />
         <Search class="size-4 absolute top-3 right-4 text-muted-foreground pointer-events-none" />
       </div>
@@ -69,7 +71,7 @@ const tickets = computed((): ITicket[] => {
       </template>
       <template v-else>
         <p class="italic text-muted-foreground">
-          Pas de tickets ouverts pour l'instant...
+          {{ t("help.ticket.noOpened") }}
         </p>
       </template>
     </main>

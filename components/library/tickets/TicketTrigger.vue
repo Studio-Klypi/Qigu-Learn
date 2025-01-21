@@ -3,6 +3,8 @@ import { MessagesSquare, Users } from "lucide-vue-next";
 import { formatDate } from "~/lib/utils";
 import type { ITicket } from "~/types/tickets";
 
+const { t } = useI18n();
+
 const props = defineProps<{
   ticket: ITicket;
 }>();
@@ -25,12 +27,12 @@ const user = props.ticket.author;
     <div class="flex flex-col items-start">
       <p class="font-bold">
         {{ ticket.title }} <Badge variant="outline">
-          {{ ticket.category }}
+          {{ t(`help.ticket.category.${ticket.category}`) }}
         </Badge> <Badge
           v-if="ticket.closed"
           variant="destructive"
         >
-          fermé
+          {{ t("help.ticket.closed") }}
         </Badge>
       </p>
       <span class="text-sm text-muted-foreground line-clamp-1">{{ ticket.description }}</span>

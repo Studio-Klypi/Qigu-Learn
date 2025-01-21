@@ -109,5 +109,40 @@ export default {
   },
   help: {
     tab: "Learn · Obtenir de l'aide",
+    ticket: {
+      create: "Nouveau ticket",
+      search: "Recherchez un ticket...",
+      noOpened: "Pas de tickets ouverts pour l'instant...",
+      closed: "Fermé",
+      category: {
+        logistic: "Logistique",
+        usage: "Utilisation",
+        data: "Récupération/Suppression des données",
+        other: "Autre demande",
+      },
+    },
+    fields: {
+      program: "Parcours",
+      title: {
+        label: "Titre",
+        placeholder: "Titre de la réclamation",
+      },
+      description: {
+        label: "Description",
+        placeholder: "Votre message...",
+      },
+      category: "Catégorie",
+    },
+    config: {
+      hideClosed: "Masquer les tickets clôturés",
+      explanation: "Si vous avez une requête, veuillez créer un ticket. Votre ticket sera adressé à la personne de notre équipe la plus à même de vous aider.",
+      information: "Assurez-vous de fournir le plus d’informations possible.",
+      timing: "Nous répondons généralement sous 24 heures. Vous recevrez une notification quand nous aurons répondu à votre requête.",
+    },
+    createAction: {
+      idle: "Ouvrir le ticket",
+      loading: "Ouverture du ticket...",
+    },
+    reply: "Réponde...",
   },
 };

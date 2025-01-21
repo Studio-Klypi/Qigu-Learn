@@ -3,6 +3,8 @@ import { Send } from "lucide-vue-next";
 import TicketTrigger from "~/components/library/tickets/TicketTrigger.vue";
 import type { ITicket } from "~/types/tickets";
 
+const { t } = useI18n();
+
 defineProps<{
   ticket: ITicket;
 }>();
@@ -30,13 +32,13 @@ defineProps<{
         </DialogTitle>
         <div class="flex items-center gap-1">
           <Badge variant="outline">
-            {{ ticket.category }}
+            {{ t(`help.ticket.category.${ticket.category}`) }}
           </Badge>
           <Badge
             v-if="ticket.closed"
             variant="destructive"
           >
-            Fermé
+            {{ t("help.ticket.closed") }}
           </Badge>
         </div>
       </DialogHeader>
@@ -48,7 +50,7 @@ defineProps<{
       <Separator class="mt-2" />
 
       <DialogFooter class="flex flex-row items-center justify-start">
-        <Input placeholder="Répondre..." />
+        <Input :placeholder="t('help.reply')" />
         <Button
           class="shrink-0"
           size="icon"
