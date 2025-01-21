@@ -1,4 +1,10 @@
 export default {
+  // temp
+  responsiveNotAvailable: {
+    title: "En cours de développement",
+    description: "Le responsive n'est pas encore disponible. L'équipe travaille dessus en ce moment pour le fournir au plus vite.",
+  },
+  // temp
   locales: {
     fr: "Français",
     en: "Anglais",
